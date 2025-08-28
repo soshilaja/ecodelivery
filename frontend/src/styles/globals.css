@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Add any global styles here */
+body {
+  @apply bg-gray-100;
+}
+
+@layer utilities {
+  .slick-dots .slick-active button {
+    @apply bg-white scale-125;
+  }
+  
+  .slick-slide {
+    @apply opacity-0 transition-opacity duration-1000;
+  }
+  
+  .slick-active {
+    @apply opacity-100;
+  }
+}
+
+/* You might need to add styles for react-leaflet */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
