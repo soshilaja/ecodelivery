@@ -18,17 +18,6 @@ function HeroSlider() {
     fade: true,
     cssEase: "linear",
     arrows: false,
-    // appendDots: (dots) => (
-    //   <div className="absolute bottom-5 left-0 right-0">
-    //     <ul className="flex justify-center items-center gap-2"> {dots} </ul>
-    //   </div>
-    // ),
-    // customPaging: () => (
-    //   <button className="w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all duration-300 focus:outline-none">
-    //     <span className="sr-only">Slide</span>
-    //   </button>
-    // ),
-    // dotsClass: "slick-dots",
   };
 
   const images = [

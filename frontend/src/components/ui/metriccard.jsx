@@ -8,4 +8,3 @@ export const MetricCard = ({ title, value }) => (
 );
 
 
-// px-4 py-5 border-b border-gray-200 font-medium sm:px-6

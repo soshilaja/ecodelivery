@@ -178,7 +178,6 @@ const PricingDetails = ({
           }
         );
       });
-      console.log(vehicleType);
 
       const element = response.rows[0].elements[0];
       if (element.status === "OK") {

@@ -22,7 +22,7 @@ const Home = () => {
             </p>
             <Link
               to="/account/order"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white text-lg font-semibold 
+              className="inline-block bg-green-900 hover:bg-green-700 text-white text-lg font-semibold 
                 py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl 
                 transform hover:-translate-y-1 active:translate-y-0"
             >

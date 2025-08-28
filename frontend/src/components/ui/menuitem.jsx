@@ -1,41 +1,4 @@
-
-// import PropTypes from "prop-types";
-// import { Link, useLocation } from "react-router-dom";
-
-// const MenuItem = ({ href, children, onClick, isDropdown = false }) => {
-//   const location = useLocation();
-//   const isActive = location.pathname.startsWith(href);
-//   const baseClasses = isDropdown
-//     ? "block px-4 py-2 text-sm"
-//     : "px-3 py-2 rounded-md text-sm font-medium";
-//   const activeClasses = isDropdown
-//     ? "bg-gray-100 text-gray-900"
-//     : "bg-gray-900 text-white";
-//   const inactiveClasses = isDropdown
-//     ? "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-//     : "text-gray-300 hover:bg-gray-700 hover:text-white";
-
-
-//   return (
-//     <Link
-//       to={href}
-//       className={`${baseClasses} ${isActive ? activeClasses : inactiveClasses}`}
-//       onClick={onClick}
-//     >
-//       {children}
-//     </Link>
-//   );
-// };
-
-// MenuItem.propTypes = {
-//   href: PropTypes.string.isRequired,
-//   children: PropTypes.node.isRequired,
-//   onClick: PropTypes.func,
-//   isDropdown: PropTypes.bool,
-// };
-
-// export default MenuItem;
-
+// MenuItem.jsx
 
 import PropTypes from "prop-types";
 import { Link} from "react-router-dom";

@@ -13,7 +13,7 @@ const HowItWorks = () => {
     <div className="bg-gray-100 p-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <header className="text-center py-12 bg-green-600">
+        <header className="text-center py-12 bg-green-900">
           <h1 className="text-4xl font-bold text-white">
             How Eco Delivery Works
           </h1>
@@ -93,7 +93,7 @@ const HowItWorks = () => {
         <div className="text-center">
           <Link
             to="/account/order"
-            className="mt-8 inline-block bg-green-600 hover:bg-green-700 text-white text-lg font-semibold py-3 px-8 rounded-full"
+            className="mt-8 inline-block bg-green-900 hover:bg-green-700 text-white text-lg font-semibold py-3 px-8 rounded-full"
           >
             Start Using Eco Delivery Today
           </Link>

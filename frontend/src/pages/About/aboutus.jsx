@@ -96,7 +96,7 @@ const AboutUs = () => {
             <div className="bg-white shadow-lg rounded-lg p-6">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src="/images/jane-smith.png"
                   alt="Team Member 1"
                   className="w-full h-full object-cover"
                 />
@@ -111,7 +111,7 @@ const AboutUs = () => {
             <div className="bg-white shadow-lg rounded-lg p-6">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src="/images/john-doe.jpg"
                   alt="Team Member 2"
                   className="w-full h-full object-cover"
                 />
@@ -128,7 +128,7 @@ const AboutUs = () => {
             <div className="bg-white shadow-lg rounded-lg p-6">
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
                 <img
-                  src="https://via.placeholder.com/150"
+                  src="/images/sarah-johnson.png"
                   alt="Team Member 3"
                   className="w-full h-full object-cover"
                 />

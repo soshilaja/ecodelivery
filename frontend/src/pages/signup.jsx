@@ -79,16 +79,6 @@ const Signup = () => {
             <FontAwesomeIcon icon={faGoogle} className="mr-2" /> Sign up with
             Google
           </button>
-
-          {/* <button className="flex items-center justify-center w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-500 transition-colors duration-300">
-            <FontAwesomeIcon icon={faFacebook} className="mr-2" /> Sign up with
-            Facebook
-          </button> */}
-
-          {/* <button className="flex items-center justify-center w-full bg-gray-800 text-white font-bold py-3 px-4 rounded-lg hover:bg-gray-700 transition-colors duration-300">
-            <FontAwesomeIcon icon={faApple} className="mr-2" /> Sign up with
-            Apple
-          </button>*/}
           </div> 
 
         <div className="text-center text-gray-500 mb-6">
@@ -114,7 +104,7 @@ const Signup = () => {
           {/* Signup Button */}
           <button
             type="submit"
-            className="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-500 transition-colors duration-300"
+            className="w-full bg-green-900 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-500 transition-colors duration-300"
           >
             Continue
           </button>
@@ -123,7 +113,7 @@ const Signup = () => {
         {/* Link to Login */}
         <p className="text-center text-gray-600 mt-4">
           Already have an account?{" "}
-          <Link to="/login" className="text-green-600 hover:underline">
+          <Link to="/login" className="text-green-900 hover:underline">
             Login here
           </Link>
           .

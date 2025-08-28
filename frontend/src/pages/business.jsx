@@ -116,7 +116,7 @@ const B2BLandingPage = () => {
             <div className="flex space-x-4">
               <Link
                 to="/account/order"
-                className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition flex items-center space-x-2"
+                className="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition flex items-center space-x-2"
               >
                 <span>Request Demo</span>
                 <ChevronRight className="w-5 h-5" />
@@ -181,7 +181,7 @@ const B2BLandingPage = () => {
                 />
                 <button
                   onClick={handleCalculateSavings}
-                  className="w-full bg-green-600 text-white py-3 rounded hover:bg-green-700 transition"
+                  className="w-full bg-green-900 text-white py-3 rounded hover:bg-green-700 transition"
                 >
                   Calculate Savings
                 </button>

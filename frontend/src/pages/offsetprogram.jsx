@@ -100,7 +100,7 @@ const OffsetProgram = () => {
           </p>
           <Link
             to="/sustainability/tips"
-            className="mt-8 inline-block bg-green-600 hover:bg-green-700 text-white text-lg font-semibold py-3 px-8 rounded-full"
+            className="mt-8 inline-block bg-green-900 hover:bg-green-700 text-white text-lg font-semibold py-3 px-8 rounded-full"
           >
             Learn More
           </Link>
