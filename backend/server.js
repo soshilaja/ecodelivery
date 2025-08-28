@@ -1,10 +1,12 @@
+// Load environment variables
+import dotenv from "dotenv";
+dotenv.config();
+
+
 import express from "express";
 import Stripe from "stripe";
 import cors from "cors";
-import dotenv from "dotenv";
 
-// Load environment variables
-dotenv.config();
 
 const app = express();
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
@@ -20,7 +22,6 @@ app.use(
 
 // Middleware
 app.use(express.json());
-app.use(cors());
 
 // Calculate order amount
 const calculateOrderAmount = (items) => {
