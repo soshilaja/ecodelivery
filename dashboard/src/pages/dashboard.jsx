@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import {
-  collection,
   query,
   where,
-  // getDocs,
   orderBy,
   onSnapshot,
 } from "firebase/firestore";
-import { db } from "../services/firebase";
+import { driversCollection, ordersCollection } from "../services/firebase";
 import {
   BarChart,
   Bar,
@@ -43,11 +41,7 @@ const Dashboard = () => {
   const [displayedOrders, setDisplayedOrders] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const ordersPerPage = 5;
-
-  // useEffect(() => {
-  //   fetchDashboardData();
-  // }, []);
+  const ordersPerPage = 10;
 
   useEffect(() => {
     // Set up real-time listeners
@@ -77,50 +71,9 @@ const Dashboard = () => {
     );
   }, [searchTerm, currentPage, allOrders]);
 
-  // const fetchDashboardData = async () => {
-  //   try {
-  //     const ordersQuery = query(
-  //       collection(db, "orders"),
-  //       orderBy("createdAt", "desc")
-  //     );
-  //     const ordersSnapshot = await getDocs(ordersQuery);
-
-  //     let revenue = 0;
-  //     const orders = [];
-  //     ordersSnapshot.forEach((doc) => {
-  //       const order = { id: doc.id, ...doc.data() };
-  //       revenue += order.price;
-  //       orders.push(order);
-  //     });
-
-  //     const driversQuery = query(
-  //       collection(db, "drivers"),
-  //       where("status", "==", "Online")
-  //     );
-  //     const driversSnapshot = await getDocs(driversQuery);
-      
-  //     setAllOrders(orders);
-      
-      
-  //     setDisplayedOrders(orders.slice(0, ordersPerPage));
-      
-  //     setMetrics({
-  //       totalOrders: ordersSnapshot.size,
-  //       activeDrivers: driversSnapshot.size,
-  //       totalRevenue: revenue,
-  //       pendingDeliveries: orders.filter((o) => o.status === "pending").length,
-  //       completedDeliveries: orders.filter((o) => o.status === "completed").length,
-  //     });
-  //     const trends = prepareTrendsData(orders);
-  //     setDeliveryTrends(trends);
-  //   } catch (error) {
-  //     console.error("Error fetching dashboard data:", error);
-  //   }
-  // };
-
     const setupOrdersListener = () => {
       const ordersQuery = query(
-        collection(db, "orders"),
+        ordersCollection,
         orderBy("createdAt", "desc")
       );
 
@@ -158,7 +111,7 @@ const Dashboard = () => {
 
     const setupDriversListener = () => {
       const driversQuery = query(
-        collection(db, "drivers"),
+        driversCollection,
         where("status", "==", "Online")
       );
 
@@ -247,7 +200,7 @@ const Dashboard = () => {
           title="Completed Deliveries"
           value={metrics.completedDeliveries}
           icon={<Star className="h-6 w-6" />}
-          color="text-orange-600"
+          color="text-green-600"
         />
       </div>
 
@@ -314,6 +267,7 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
+              {console.log(displayedOrders)}
               {displayedOrders.map((order) => (
                 <tr key={order.id}>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -337,8 +291,8 @@ const Dashboard = () => {
                         order.status === "completed"
                           ? "bg-green-100 text-green-800"
                           : order.status === "pending"
-                          ? "bg-yellow-100 text-yellow-800"
-                          : "bg-gray-100 text-gray-800"
+                          ? "bg-red-100 text-red-800"
+                          : "bg-yellow-100 text-yellow-800"
                       }`}
                     >
                       {order.status || "Pending"}

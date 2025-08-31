@@ -1,7 +1,7 @@
 // firebase.js
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore, collection } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const FIREBASE_API_KEY = import.meta.env.VITE_FIREBASE_API_KEY;
@@ -20,7 +20,18 @@ const firebaseConfig = {
   appId: APP_ID,
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+export const firestore = getFirestore(app);
 export const storage = getStorage(app);
+export const googleProvider = new GoogleAuthProvider();
+
+// Optional: Firestore collections
+export const driversCollection = collection(firestore, 'drivers');
+export const ordersCollection = collection(firestore, 'orders');
+export const orderDeclinesCollection = collection(firestore, "order_declines");
+export const usersCollection = collection(firestore, 'users');
+export const earningsCollection = collection(firestore, 'earnings');
+
+
